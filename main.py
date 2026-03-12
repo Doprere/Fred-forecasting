@@ -16,8 +16,8 @@ warnings.filterwarnings("ignore", category=RuntimeWarning)
 
 # Step 1: Data Loading
 
-fredM_data = pd.read_csv('C:/Users/dopre/OneDrive/桌面/碩1/上學期/經濟預測/fredM_data.csv', index_col=0, parse_dates=True)
-fredQ_data = pd.read_csv('C:/Users/dopre/OneDrive/桌面/碩1/上學期/經濟預測/fredQ_data.csv', index_col=0, parse_dates=True)
+fredM_data = pd.read_csv('fredM_data.csv', index_col=0, parse_dates=True)
+fredQ_data = pd.read_csv('fredQ_data.csv', index_col=0, parse_dates=True)
 
 # Select quarterly CPI and compute percentage change
 CPI = fredQ_data.loc[:, 'CPIAUCSL'].pct_change(4)
